@@ -34,6 +34,7 @@ body {
   background-color: black;
   /* background-color: var(--light-bg); */
   /* background-color: #120d2d; */
+  font-size: 24px;
 }
 
 
@@ -41,10 +42,11 @@ body {
 
 .header {
   /* position: fixed; */
-  height: 150rem;
-  /* background-color: #fff; */
-  background-color: #120d2d;
+  position: relative;
   overflow: hidden;
+  max-height: 150rem;
+  background-color: #7d7d7d;
+  background-color: #120d2d;
 }
 
 @keyframes example {
@@ -63,103 +65,130 @@ body {
     transform: rotate(0deg);
   }
 }
+/* Set a common base font size for better scalability */
 
-.head2 .rotimage {
-   position: absolute;
-  top: 13%;
-  left: 2%;
-  opacity: 0.5;
-  transform: translate(-50%, -50%);
-  animation-name: example;
-  animation-duration: 20s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  z-index: 1;
+.loimg {
+  /* flex-direction: column; */
+  width: 80px;
+  height: 80px;
+
 }
-.head2 .rotball {
-   /* display: block; */
-   z-index: 0;
-  margin-left: 12vw;
-  margin-top: -43rem;
+.guitar span{
+  color: white;
+  text-align: center;
+  font-family: 'Just Another Hand', cursive;
 
-  width: 170em;
-  height: 170em;
+}
+.guitar{
+
+  font-size: 34px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+}
+.head2{
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+
+.Rotation{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-image: url("../covers/ill1.jpg");
+  /* background-color: #e74c3c; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 70%;
+  height: 100vh;
   animation-name: example2;
   transform-origin: center;
   animation-duration: 50s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+ position: relative; 
+ z-index: 1;
+
+  
 }
- .heads {
-   display: inline;
-   z-index: 1;
-   position: relative;
-   background-color:#120d2d;
-   margin-top: 10rem;
-   font-size: 4rem;
-   cursor: pointer;
- }
- 
- .head2 .guitar{
-  position: absolute;
-  font-size: 6.5rem;
+.Rotation img{
   z-index: 3;
-  display: flex;
-  flex-direction: column;
-  margin-left: 104rem;
-  margin-top: -26rem;
-  /* justify-content: center; */
-  /* align-items: center;  */
- 
-  color: #fff;
-  /* font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif */
-  
-}
-
-.guitar span{
-   font-family: 'Dancing Script', cursive;
-   margin-top: -2rem;
-   
-
- }
- 
-  .loimg {
-    /* flex-direction: column; */
-
-     width: 20rem;
-     height: 20rem;
- }
-  
-  .head2 .LOGO{
   position: absolute;
-  z-index: 3;
-  display: flex;
-  margin-left: 55rem;
-  margin-top: 27rem;
-  /* justify-content: center; */
-  /* align-items: center;  */
-  
-  color: #fff;
+  width: 140%;
+  height: 140%;
+  transform: translate(-50%, -50%);
+  animation-name: example;
+  animation-duration: 20s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  opacity: 0.2;
 }
-.LOGO span{
-  font-size: 30rem;
+
+
+
+.head2 .LOGO {
+ 
+  z-index: 2;
+  position: absolute;
+  /* text-align: center; */
+  color: #fff;
+  font-size: 150px;
   
+
+
+}
+
+.head2 .LOGO span{
   font-family: 'Just Another Hand', cursive;
-  justify-content: center;
-}
-   
 
+}
+
+@media (max-width: 768px) {
+  .LOGO span {
+    font-size: 90px;
+  }
+}
+@media (max-width: 480px) {
+  .LOGO span {
+    font-size: 60px;
+ 
+  }
+  .LOGO{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+  }
+  .Rotation img{
+    width: 200%;
+  height: 200%;
+  }
+
+  body{
+    font-size: 12px;
+  }
+}
+
+.heads{
+ z-index: 6;
+ position: relative;
+}
 
  .heads ul {
    display: flex;
-   margin-left: -40rem;
+   justify-content: space-evenly;
   }
   .heads ul li{
-   margin-top: 20rem;
-   padding-left: 82rem;
-   padding-right: 43rem;
+  
+   padding: 20px;
    list-style: none;
-   /* margin-left: 4rem; */
  }
 
 .heads ul li a {

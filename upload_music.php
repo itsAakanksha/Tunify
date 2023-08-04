@@ -92,7 +92,7 @@ if(isset($message)){
       <p>select album</p>
       <input type="file" name="album" class="box" accept="image/*">
       <input type="submit" value="upload music" class="btn" name="submit">
-      <a href="home.php" class="option-btn">go to home</a>
+      <a href="index.php" class="option-btn">go to home</a>
    </form>
 
 </section>
