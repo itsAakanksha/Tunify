@@ -171,7 +171,8 @@ body {
   height: 200%;
   }
   .Rotation{
-    width: 90%;
+    width: 320px;
+    max-height: 340px;
   }
 
   body{
